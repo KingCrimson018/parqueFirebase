@@ -1,0 +1,27 @@
+<c-container class="col-6 d-flex  flex-column ">
+    <form (submit)="register()">
+        <h2>Register</h2>
+        <div [cFormFloating]="true" class="mb-3 ">
+            <input cFormControl id="email" placeholder="name@example.com" type="email" name="email" [(ngModel)]="email" />
+            <label cLabel for="email">Email address</label>
+        </div>
+        <div class="d-flex flex-row justify-content-between col-6"> 
+            <c-input-group class=" col-3 mb-2">
+                <span cInputGroupText>Nombre</span>
+                <input cFormControl id="name" placeholder="" name="name" [(ngModel)]="name" />
+            </c-input-group>
+            <c-input-group class=" col-3 mb-2">
+                <span cInputGroupText>Apellido</span>
+                <input cFormControl id="lastName" placeholder="" name="lastName" [(ngModel)]="lastName"/>
+            </c-input-group>
+        </div>
+        <div [cFormFloating]="true" class="mb-3">
+            <input cFormControl id="password" placeholder="s" type="password" name="password" [(ngModel)]="password" />
+            <label cLabel for="password">Password</label>
+        </div>
+        <div class="d-flex justify-content-between">
+            <input type="submit" value="Sign Up" class="btn btn-success col-5 ">
+            <a routerLink="/login" class="btn btn-primary col-5">Log In</a>
+        </div>
+    </form>
+</c-container>

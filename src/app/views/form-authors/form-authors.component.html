@@ -1,0 +1,24 @@
+<c-container class="col-6 d-flex  flex-column ">
+    <form (submit)="updateAuthor()">
+        <h2>Edit</h2>
+        <div [cFormFloating]="true" class="mb-3 ">
+            <input cFormControl id="email" placeholder="name@example.com" type="email" name="email" [(ngModel)]="authorT.email" bind-value="authorT.email"  disabled=""/>
+            <label cLabel for="email">Email address</label>
+        </div>
+        <div class="d-flex flex-row justify-content-between col-6"> 
+            <c-input-group class=" col-3 mb-2">
+                <span cInputGroupText>Nombre</span>
+                <input cFormControl id="name" placeholder="" name="name" [(ngModel)]="authorT.name" bind-value="authorT.name" />
+            </c-input-group>
+            <c-input-group class=" col-3 mb-2">
+                <span cInputGroupText>Apellido</span>
+                <input cFormControl id="lastName" placeholder="" name="lastName" [(ngModel)]="authorT.lastName" bind-value="authorT.lastName"/>
+            </c-input-group>
+        </div>
+        
+        <div class="d-flex justify-content-between">
+            <input type="submit" value="Update" class="btn btn-success col-5 ">
+            <a routerLink="/authors" class="btn btn-danger col-5">Volver</a>
+        </div>
+    </form>
+</c-container>

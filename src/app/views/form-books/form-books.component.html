@@ -1,0 +1,23 @@
+<form class="form" (submit)="submit()"> 
+    <div class="row mt-2 mb-2">
+        <div class="col">
+            <input type="text" name="book.author" placeholder="Auhtor" class="form-control" [(ngModel)]="book.author" bind-value="book.author">
+        </div>
+        <div class="col">
+            <input type="text" name="book.name" placeholder="Name" class="form-control" [(ngModel)]="book.name" bind-value="book.name">
+        </div>
+    </div>
+    <div class="row mt-2 mb-2">
+        <div class="col">
+            <textarea name="book.description" class="form-control" rows="3" [(ngModel)]="book.description" bind-value="book.description" ></textarea>
+        </div>
+    </div>
+    <div class="row mt-2 mb-2">
+        <div class="col">
+            <input type="submit" value="Guardar" class="btn btn-success col-12">
+        </div>
+        <div class="col">
+            <button (click)="cancel()" class="btn btn-danger col-12">Cancel</button>
+        </div>
+    </div>
+</form>
